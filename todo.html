@@ -1,6 +1,6 @@
 <html>
    <head>
-      <title>Todo - home - divya</title>
+      <title>Todo - home</title>
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/to-do.css">
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
@@ -9,32 +9,33 @@
    </head>
    <body>
       
-      <div class="container-fluid">
+      <div class="container-fluid" id="hello">
          <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12 col-centered" id="mainBox">
                                                 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog" :class="{ ' in show' : modalShow}">
-  <div class="modal-dialog">
+               
+               <div id="myModal" class="modal fade" role="dialog" :class="{ ' in show' : modalShow}">
+                 <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">New list</h4>
-      </div>
-      <div class="modal-body">
-        <p>Title:</p>
-         <input type="text" class="form-control" v-model="newTitle">
-         <br>
-      </div>
-      <div class="modal-footer">
-         <button type="button" class="btn btn-primary" @click="addNewList">Save</button>
-         
-      </div>
-    </div>
+                   <!-- Modal content-->
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <h4 class="modal-title">New list</h4>
+                     </div>
+                     <div class="modal-body">
+                       <p>Title:</p>
+                        <input type="text" class="form-control" v-model="newTitle">
+                        <br>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" @click="addNewList">Save</button>
 
-  </div>
-</div>
+                     </div>
+                   </div>
+
+                 </div>
+               </div>
 
               <h2 class="headingMain" :class="lists[0].color"><a href="javascript:window.history.back();" class="fa fa-arrow-left"></a><span v-if="mainIndex!=1000">{{lists[mainIndex].title}}</span> <span v-if="mainIndex==1000">Empty</span>
                
